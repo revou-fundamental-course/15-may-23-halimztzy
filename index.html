@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Katik</title>
+</head>
+<body>
+    <header>
+        <h1 class="judul"><span>Katik</span> <span class="subtitle"> Kalkulator Matematik</span></h1>
+    </header>
+    <main>
+        <div class="card">
+            <div class="contenthead">
+                <h1 class="contenthead"> Welcome to Katik </h1>
+                <p> Hai teman-teman, Selamat datang di Katik <br>
+                    Sebuah web sederhana untuk melakukan penghitungan luas dan keliling dari persegi </p>
+        </div>  
+       <!-- Untuk Menghitung Luas Persegi -->
+        <div id="page-square" class="container active">
+            <div class="panel">
+                <div class="panel-head">
+                    <h2> Luas Persegi </h2>
+        </div>
+        <div class="panel-content">
+            <p><img src="https://www.doyanblog.com/wp-content/uploads/2021/12/rumus-persegi.jpg" alt="Square" class="figure"></p>
+            <p class="text-left"> Rumus Luas Persegi adalah: </p>
+            <p> 
+                <strong> L = S x S </strong>
+            </p>
+            <P class="text-left"> Di mana: <br>
+            L = Luas <br>
+            S = Sisi </p>
+        </div>
+        <div class="panel-foot">
+            <h2> Hitung Luas Persegi </h2>
+            <p> 
+                <input id="sisi-luas" name="sisi-luas" placeholder="Nilai Sisi" required
+                oninput="validateNumericInput(this)">
+            </p>
+            <div id="output_luas" name="output_luas">
+                <p class="text-left"> L = S x S <br> 
+                L = <span id="rumus-luas"></span><br>
+                L = <span id="result-luas"></span></p>
+            </div>
+            <p>
+                <button name="hitung-luas" onclick="hitungluas()">Hitung</button>
+            </p>
+            <p class="text-right">
+                <input type="reset" name="reset-luas" onclick="resetluas(0)">
+            </p>
+        </div>
+    </main>
+
+    <div class="panel">
+        <div class="panel-head">
+            <h2> Keliling Persegi </h2>
+        </div>
+        <div class="panel-content">
+            <p><img src="https://www.doyanblog.com/wp-content/uploads/2021/12/rumus-persegi.jpg" alt="Square" class="figure"></p>
+            <p class="text-left"> Rumus Keliling Persegi adalah: </p>
+            <p>
+                <strong> K = 4 x S </strong>
+            </p>
+            <p class="text-left"> Di mana: <br>
+            K = Keliling <br>
+            S = Sisi </p>
+        </div>
+        <div class="panel-foot">
+            <h2> Hitung Keliling Persegi </h2>
+            <p>
+                <input id="sisi-keliling" name="sisi-keliling" placeholder="Nilai Sisi" required
+                oninput="validateNumericInput(this)">
+            </p>
+            <div id="output_keliling" name="output_keliling">
+                <p class="text-left"> K = 4 x S <br>
+                K <span id="rumus-keliling"></span><br>
+                K <span id="result-keliling"></span></p>
+            </div>
+            <p>
+                <button name="hitung-keliling" onclick="hitungkeliling()">Hitung</button>
+            </p>
+            <p class="text-right">
+                <input type="reset" name="reset-keliling" onclick="resetkeliling(0)">
+            </p>
+        </div>
+    </div>
+</body>
+
+<!--Footer-->
+<footer>
+    <p> 2023 Ansen Halim </p>
+</footer>
+</body>
+</html>
